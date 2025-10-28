@@ -2,6 +2,7 @@ import { deleteTodo } from "@/lib/action";
 import { GET } from "../api/todos/route";
 import Button from "@/compnants/Button";
 
+export const dynamic = "force-dynamic";
 async function TodosList() {
   const res = await GET();
   const data = await res.json();

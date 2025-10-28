@@ -1,6 +1,7 @@
 import { dbConnection } from "@/lib/dbConnection";
 import { Todo } from "@/lib/models/todos";
 import { NextResponse } from "next/server";
+export const dynamic = "force-dynamic";
 dbConnection();
 export async function GET() {
   try {
