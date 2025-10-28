@@ -1,10 +1,11 @@
-import { deleteTodo } from "@/lib/action";
-import { GET } from "../api/todos/route";
+export const dynamic = "force-dynamic";
+
 import Button from "@/compnants/Button";
 
-export const dynamic = "force-dynamic";
 async function TodosList() {
-  const res = await GET();
+  const res = await fetch("http://localhost:3000/api/todos", {
+    cache: "no-store",
+  });
   const data = await res.json();
 
   return (
